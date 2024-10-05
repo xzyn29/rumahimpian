@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
-import { Home, MapPin, BedDouble, Bath, Square, Search } from "lucide-react"
+import { MapPin, BedDouble, Bath, Square, Search } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import Header from '@/components/Header'

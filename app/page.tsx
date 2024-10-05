@@ -5,7 +5,6 @@ import LatestPropertiesSection from "@/components/LatestPropertiesSection"
 import TestimonialsSection from "@/components/TestimonialsSection"
 import CTASection from "@/components/CTASection"
 import Footer from "@/components/Footer"
-import Link from "next/link";
 
 export default function Home() {
   return (

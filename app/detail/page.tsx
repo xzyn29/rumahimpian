@@ -4,8 +4,7 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Home, MapPin, Phone, Mail, BedDouble, Bath, Square, Car, ChevronLeft, ChevronRight, Check } from "lucide-react"
-import Link from "next/link"
+import { MapPin, BedDouble, Bath, Square, Car, ChevronLeft, ChevronRight, Check } from "lucide-react"
 import Image from "next/image"
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'

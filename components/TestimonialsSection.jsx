@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
           {[1, 2, 3].map((i) => (
             <Card key={i}>
               <CardContent className="pt-8">
-                <p className="mb-4">"{`Saya sangat puas dengan pelayanan dan kualitas rumah yang ditawarkan. Terima kasih Rumah Impian!`}"</p>
+                <p className="mb-4">{`"Saya sangat puas dengan pelayanan dan kualitas rumah yang ditawarkan. Terima kasih Rumah Impian!"`}</p>
                 <p className="font-bold">Pelanggan {i}</p>
               </CardContent>
             </Card>
