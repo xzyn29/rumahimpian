@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function HeroSection(){
   return(
-    <section className="w-full py-6 md:py-12 lg:py-12 xl:py-48 bg-muted">
+    <section className="gap-20 md:my-28 flex flex-col-reverse md:flex-row items-center justify-between">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <Image className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last" src={"/home3.jpg"} alt="Rumah Modern" width="550" height="310"/>
@@ -20,7 +20,7 @@ export default function HeroSection(){
               <Link href="/properti">Jelajahi Properti</Link>
             </Button>
             <Button className="text-sm" variant="outline">
-              <Link href="/rumah">Hubungi Kami</Link>
+              <Link href="/">Hubungi Kami</Link>
             </Button>
           </div>
         </div>
