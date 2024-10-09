@@ -5,7 +5,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
@@ -15,12 +15,13 @@ export default function LatestPropertiesSection() {
     "/home1.jpg", // Gambar untuk property 1
     "/home2.jpg", // Gambar untuk property 2
     "/home3.jpg", // Gambar untuk property 3
+    "/home4.jpg", // Gambar untuk property 3
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+    <section className="gap-10 md:my-28 flex flex-col-reverse md:flex-row items-center justify-between">
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
           Properti Terbaru
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

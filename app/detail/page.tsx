@@ -1,34 +1,40 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MapPin, BedDouble, Bath, Square, Car, ChevronLeft, ChevronRight, Check } from "lucide-react"
-import Image from "next/image"
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  MapPin,
+  BedDouble,
+  Bath,
+  Square,
+  Car,
+  ChevronLeft,
+  ChevronRight,
+  Check,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function PropertyDetail() {
-  const [currentImage, setCurrentImage] = useState(0)
-  const images = [
-    "/home1.jpg",
-    "/home2.jpg",
-    "/home3.jpg",
-  ]
+  const [currentImage, setCurrentImage] = useState(0);
+  const images = ["/home1.jpg", "/home2.jpg", "/home3.jpg", "/home4.jpg"];
 
   const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length)
-  }
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
-  }
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <Header/>
-      <main className="flex-1 pt-0">
+    <div className="flex flex-col min-h-screen top-0 px-6 py-6 items-center">
+      <Header />
+      <main className="container max-w-7xl mx-auto w-full px-4 sm:px-8">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
@@ -36,10 +42,9 @@ export default function PropertyDetail() {
                 <div className="relative aspect-video overflow-hidden rounded-xl">
                   <Image
                     src={images[currentImage]}
-                    alt={`Gambar Rumah ${currentImage + 1}`}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 ease-in-out transform hover:scale-105"
+                    alt={`Rumah ${currentImage + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
                   />
                   <Button
                     variant="outline"
@@ -67,7 +72,9 @@ export default function PropertyDetail() {
                       width={100}
                       height={100}
                       className={`rounded-lg cursor-pointer transition-opacity duration-300 ${
-                        currentImage === index ? 'opacity-100 ring-2 ring-blue-600' : 'opacity-60 hover:opacity-100'
+                        currentImage === index
+                          ? "opacity-100 ring-2 ring-blue-600"
+                          : "opacity-60 hover:opacity-100"
                       }`}
                       onClick={() => setCurrentImage(index)}
                     />
@@ -76,10 +83,12 @@ export default function PropertyDetail() {
               </div>
               <div className="space-y-6">
                 <div>
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rumah Keluarga Nyaman</h1>
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    Rumah Keluarga Nyaman
+                  </h1>
                   <p className="text-gray-500 mt-2">
                     <MapPin className="inline-block mr-1" size={16} />
-                    Jl. Contoh No. 123, Tangerang
+                    Jl. Haji  No. 123, Tangerang
                   </p>
                 </div>
                 <div className="flex items-center space-x-4 text-lg">
@@ -96,8 +105,14 @@ export default function PropertyDetail() {
                     <Car className="mr-2" size={20} /> 2 Parkir
                   </span>
                 </div>
-                <p className="text-2xl font-semibold text-blue-600">Rp 3.200.000.000</p>
-                <Button size="lg" className="w-full md:w-auto">Hubungi Agen</Button>
+                <p className="text-2xl font-semibold text-blue-600">
+                  Rp 3.200.000.000
+                </p>
+                <Link href="/contact" passHref>
+                  <Button size="lg" className="w-full md:w-auto">
+                    Hubungi Agen
+                  </Button>
+                </Link>
               </div>
             </div>
             <Tabs defaultValue="deskripsi" className="mt-12">
@@ -110,15 +125,21 @@ export default function PropertyDetail() {
                 <Card>
                   <CardContent className="prose max-w-none pt-6">
                     <p>
-                      Rumah keluarga yang nyaman ini terletak di lingkungan yang tenang dan aman di Tangerang. 
-                      Dengan 4 kamar tidur dan 3 kamar mandi, rumah ini ideal untuk keluarga besar atau mereka yang sering menerima tamu.
+                      Rumah keluarga yang nyaman ini terletak di lingkungan yang
+                      tenang dan aman di Tangerang. Dengan 4 kamar tidur dan 3
+                      kamar mandi, rumah ini ideal untuk keluarga besar atau
+                      mereka yang sering menerima tamu.
                     </p>
                     <p>
-                      Desain modern dengan sentuhan klasik menciptakan suasana yang hangat dan mengundang. 
-                      Ruang tamu yang luas terhubung langsung dengan ruang makan dan dapur, menciptakan area yang sempurna untuk berkumpul keluarga.
+                      Desain modern dengan sentuhan klasik menciptakan suasana
+                      yang hangat dan mengundang. Ruang tamu yang luas terhubung
+                      langsung dengan ruang makan dan dapur, menciptakan area
+                      yang sempurna untuk berkumpul keluarga.
                     </p>
                     <p>
-                      Taman belakang yang asri menawarkan ruang outdoor yang sempurna untuk bersantai atau mengadakan acara barbecue bersama keluarga dan teman.
+                      Taman belakang yang asri menawarkan ruang outdoor yang
+                      sempurna untuk bersantai atau mengadakan acara barbecue
+                      bersama keluarga dan teman.
                     </p>
                   </CardContent>
                 </Card>
@@ -127,14 +148,34 @@ export default function PropertyDetail() {
                 <Card>
                   <CardContent className="pt-6">
                     <ul className="grid grid-cols-2 gap-4">
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> AC di setiap kamar</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Dapur modern</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Taman belakang</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Sistem keamanan 24 jam</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Kolam renang</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Area bermain anak</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Ruang kerja</li>
-                      <li className="flex items-center"><Check className="mr-2 text-green-600" /> Garasi untuk 2 mobil</li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> AC di setiap
+                        kamar
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Dapur modern
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Taman belakang
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Sistem
+                        keamanan 24 jam
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Kolam renang
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Area bermain
+                        anak
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Ruang kerja
+                      </li>
+                      <li className="flex items-center">
+                        <Check className="mr-2 text-green-600" /> Garasi untuk 2
+                        mobil
+                      </li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -154,7 +195,10 @@ export default function PropertyDetail() {
                       ></iframe>
                     </div>
                     <div className="mt-4 space-y-2">
-                      <p className="flex items-center"><MapPin className="mr-2" size={16} /> Jl. Contoh No. 123, Tangerang</p>
+                      <p className="flex items-center">
+                        <MapPin className="mr-2" size={16} /> Jl. Contoh No.
+                        123, Tangerang
+                      </p>
                       <p>Lokasi strategis dekat dengan:</p>
                       <ul className="list-disc list-inside pl-4 space-y-1">
                         <li>Pusat perbelanjaan (5 menit)</li>
@@ -170,7 +214,7 @@ export default function PropertyDetail() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
