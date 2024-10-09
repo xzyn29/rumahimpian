@@ -1,12 +1,18 @@
-import { Home } from "lucide-react";
+
 import Link from "next/link";
+import Image from "next/image"; 
 
 export default function Header() {
   return (
     <header className="max-w-7xl mx-auto w-full border-b">
       <div className="flex sm:flex-row justify-between items-center px-4 sm:px-8 py-4">
         <Link className="flex items-center gap-4" href="/">
-          <Home className="h-6 w-6" />
+          <Image 
+          src="/logo.png"
+          alt="logo Rumah Impian"
+          width={40}
+          height={40}/>
+          
           <span className="hidden sm:inline font-medium">Rumah Impian</span>
         </Link>
 
