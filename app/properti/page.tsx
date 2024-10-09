@@ -18,10 +18,11 @@ import {
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { MapPin, BedDouble, Bath, Square, Search } from "lucide-react";
-//import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 
 const properties = [
   {
@@ -214,7 +215,7 @@ export default function PropertyExplorer() {
                   </CardContent>
                   <CardFooter>
                     <Button className="w-full border-black text-black hover:text-white hover:bg-black" variant="outline">
-                      Lihat Detail
+                      <Link href="/detail">Lihat detail</Link>
                     </Button>
                   </CardFooter>
                 </Card>
