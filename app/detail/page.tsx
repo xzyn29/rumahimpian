@@ -105,7 +105,7 @@ export default function PropertyDetail() {
                     <Car className="mr-2" size={20} /> 2 Parkir
                   </span>
                 </div>
-                <p className="text-2xl font-semibold text-blue-600">
+                <p className="text-2xl font-semibold text-red-800">
                   Rp 3.200.000.000
                 </p>
                 <Link href="/contact" passHref>
