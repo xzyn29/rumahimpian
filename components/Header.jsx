@@ -8,7 +8,7 @@ export default function Header() {
       <div className="flex sm:flex-row justify-between items-center px-4 sm:px-8 py-4">
         <Link className="flex items-center gap-4" href="/">
           <Image 
-          src="/logo.png"
+          src="/logo-dark.png"
           alt="logo Rumah Impian"
           width={40}
           height={40}/>
