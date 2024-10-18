@@ -8,7 +8,7 @@ export default function TentangKami() {
     <div className="flex flex-col min-h-screen top-0 px-6 py-6">
       <Header />
       <main className="container max-w-7xl mx-auto w-full px-4 sm:px-8 py-8 flex-grow">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center md:my-28  ">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
               Tentang Rumah Impian
