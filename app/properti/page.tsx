@@ -181,49 +181,54 @@ export default function PropertyExplorer() {
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredProperties.map((property) => (
-                <Card key={property.id} className="overflow-hidden">
-                  <CardHeader className="p-0">
-                    <Image
-                      src={property.image}
-                      alt={property.name}
-                      width={400}
-                      height={200}
-                      className="w-full h-48 object-cover"
-                    />
-                  </CardHeader>
-                  <CardContent className="p-4">
-                    <h3 className="text-xl font-bold mb-2">{property.name}</h3>
-                    <p className="text-gray-600 mb-2">
-                      <MapPin className="inline-block mr-1" size={16} />
-                      {property.location}
-                    </p>
-                    <p className="text-red-800 font-semibold mb-2">
-                      Rp {property.price.toLocaleString("id-ID")}
-                    </p>
-                    <div className="flex justify-between text-sm text-gray-600">
-                      <span>
-                        <BedDouble className="inline-block mr-1" size={16} />{" "}
-                        {property.bedrooms} Kamar
-                      </span>
-                      <span>
-                        <Bath className="inline-block mr-1" size={16} />{" "}
-                        {property.bathrooms} K. Mandi
-                      </span>
-                      <span>
-                        <Square className="inline-block mr-1" size={16} />{" "}
-                        {property.area} m²
-                      </span>
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button
-                      className="w-full border-black text-black hover:text-white hover:bg-black"
-                      variant="outline"
-                    >
-                      <Link href="/detail">Lihat detail</Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
+                // eslint-disable-next-line react/jsx-key
+                <Link href="/detail">
+                  <Card key={property.id} className="overflow-hidden">
+                    <CardHeader className="p-0">
+                      <Image
+                        src={property.image}
+                        alt={property.name}
+                        width={400}
+                        height={200}
+                        className="w-full h-48 object-cover"
+                      />
+                    </CardHeader>
+                    <CardContent className="p-4">
+                      <h3 className="text-xl font-bold mb-2">
+                        {property.name}
+                      </h3>
+                      <p className="text-gray-600 mb-2">
+                        <MapPin className="inline-block mr-1" size={16} />
+                        {property.location}
+                      </p>
+                      <p className="text-red-800 font-semibold mb-2">
+                        Rp {property.price.toLocaleString("id-ID")}
+                      </p>
+                      <div className="flex justify-between text-sm text-gray-600">
+                        <span>
+                          <BedDouble className="inline-block mr-1" size={16} />{" "}
+                          {property.bedrooms} Kamar
+                        </span>
+                        <span>
+                          <Bath className="inline-block mr-1" size={16} />{" "}
+                          {property.bathrooms} K. Mandi
+                        </span>
+                        <span>
+                          <Square className="inline-block mr-1" size={16} />{" "}
+                          {property.area} m²
+                        </span>
+                      </div>
+                    </CardContent>
+                    <CardFooter>
+                      <Button
+                        className="w-full border-black text-black hover:text-white hover:bg-black"
+                        variant="outline"
+                      >
+                        <Link href="/detail">Lihat detail</Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
