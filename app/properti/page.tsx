@@ -23,7 +23,6 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-
 const properties = [
   {
     id: 1,
@@ -105,7 +104,7 @@ export default function PropertyExplorer() {
 
   return (
     <div className="flex flex-col min-h-screen top-0 px-6 py-6">
-      <Header/>
+      <Header />
       <main className="container max-w-7xl mx-auto w-full px-4 sm:px-8">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container max-w-7xl mx-auto px-4 md:px-6 ">
@@ -121,7 +120,10 @@ export default function PropertyExplorer() {
                   className="w-full"
                 />
               </div>
-              <Button className="w-full hover:bg-black text-black hover:text-white " variant="outline">
+              <Button
+                className="w-full hover:bg-black text-black hover:text-white "
+                variant="outline"
+              >
                 <Search className="mr-2 h-4 w-4" /> Cari
               </Button>
             </div>
@@ -214,7 +216,10 @@ export default function PropertyExplorer() {
                     </div>
                   </CardContent>
                   <CardFooter>
-                    <Button className="w-full border-black text-black hover:text-white hover:bg-black" variant="outline">
+                    <Button
+                      className="w-full border-black text-black hover:text-white hover:bg-black"
+                      variant="outline"
+                    >
                       <Link href="/detail">Lihat detail</Link>
                     </Button>
                   </CardFooter>

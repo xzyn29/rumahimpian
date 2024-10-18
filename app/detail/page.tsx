@@ -88,10 +88,10 @@ export default function PropertyDetail() {
                   </h1>
                   <p className="text-gray-500 mt-2">
                     <MapPin className="inline-block mr-1" size={16} />
-                    Jl. Haji  No. 123, Tangerang
+                    Jl. Haji No. 123, Tangerang
                   </p>
                 </div>
-                <div className="flex items-center space-x-4 text-lg">
+                <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4 text-lg">
                   <span className="flex items-center">
                     <BedDouble className="mr-2" size={20} /> 4 Kamar Tidur
                   </span>
@@ -105,10 +105,10 @@ export default function PropertyDetail() {
                     <Car className="mr-2" size={20} /> 2 Parkir
                   </span>
                 </div>
-                <p className="text-2xl font-semibold text-red-800">
+                <p className="text-2xl font-semibold text-red-800 mt-4">
                   Rp 3.200.000.000
                 </p>
-                <Link href="/contact" passHref>
+                <Link href="https://wa.me/62821229944" passHref>
                   <Button size="lg" className="w-full md:w-auto">
                     Hubungi Agen
                   </Button>
@@ -123,7 +123,7 @@ export default function PropertyDetail() {
               </TabsList>
               <TabsContent value="deskripsi" className="mt-4">
                 <Card>
-                  <CardContent className="prose max-w-none pt-6">
+                  <CardContent className="prose text-justify max-w-none pt-6">
                     <p>
                       Rumah keluarga yang nyaman ini terletak di lingkungan yang
                       tenang dan aman di Tangerang. Dengan 4 kamar tidur dan 3
@@ -214,6 +214,7 @@ export default function PropertyDetail() {
           </div>
         </section>
       </main>
+
       <Footer />
     </div>
   );

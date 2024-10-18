@@ -4,7 +4,7 @@ import FeaturesSection from "@/components/main/FeaturesSection";
 import LatestPropertiesSection from "@/components/main/LatestPropertiesSection";
 import TestimonialsSection from "@/components/main/TestimonialsSection";
 import CTASection from "@/components/main/CTASection";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (

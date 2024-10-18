@@ -32,7 +32,7 @@ export default function HeroSection() {
                 <Link href="/properti">Jelajahi Properti</Link>
               </Button>
               <Button className="text-sm" variant="outline">
-                <Link href="/">Hubungi Kami</Link>
+                <Link href="https://wa.me/62821229944">Hubungi Kami</Link>
               </Button>
             </div>
           </div>

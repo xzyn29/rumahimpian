@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="flex flex-col py-6 gap-2 border-t justify-between items-center max-w-7xl mx-auto w-full sm:flex-row">
         <p className="text-xs text-muted-foreground">© 2023 Rumah Impian. Hak Cipta Dilindungi.</p>
@@ -15,3 +15,5 @@ export default function Footer() {
       </footer>
   )
 }
+
+export default Footer;
