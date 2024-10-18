@@ -38,7 +38,7 @@ export default function Header() {
           </Link>
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="/tentang-kami"
+            href="/aboutus"
           >
             Tentang Kami
           </Link>
@@ -83,7 +83,10 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="https://wa.me/0821229944" className="block py-2 hover:text-gray-600">
+                <Link
+                  href="https://wa.me/0821229944"
+                  className="block py-2 hover:text-gray-600"
+                >
                   Kontak
                 </Link>
               </li>
