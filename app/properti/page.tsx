@@ -66,7 +66,7 @@ const properties = [
   },
   {
     id: 5,
-    name: "Studio Minimalis",
+    name: "Rumah Minimalis",
     price: 800000000,
     location: "Jakarta Barat",
     bedrooms: 1,
