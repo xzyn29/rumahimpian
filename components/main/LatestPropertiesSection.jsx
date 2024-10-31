@@ -11,11 +11,45 @@ import { MapPin } from "lucide-react";
 import Link from "next/link";
 
 export default function LatestPropertiesSection() {
-  const propertyImages = [
-    "/home1.jpg", // Gambar untuk property 1
-    "/home2.jpg", // Gambar untuk property 2
-    "/home3.jpg", // Gambar untuk property 3
-    "/home4.jpg", // Gambar untuk property 3
+  const properties = [
+    {
+      imageSrc: "/home1.jpg",
+      title: "Villa Mewah",
+      location: "Lokasi 1",
+      price: 1500000,
+    },
+    {
+      imageSrc: "/home2.jpg",
+      title: "Apartemen Modern",
+      location: "Lokasi 2",
+      price: 2000000,
+    },
+    {
+      imageSrc: "/home3.jpg",
+      title: "Rumah Keluarga",
+      location: "Lokasi 3",
+      price: 2500000,
+    },
+    {
+      imageSrc: "/home6.jpg",
+      title: "Townhouse Eksklusif",
+      location: "Lokasi 4",
+      price: 2200000,
+    },
+
+    {
+      imageSrc: "/home7.jpg",
+      title: "Townhouse Eksklusif",
+      location: "Lokasi 5",
+      price: 1500000,
+    },
+
+    {
+      imageSrc: "/home8.jpg",
+      title: "Townhouse Eksklusif",
+      location: "Lokasi 6",
+      price: 2500000,
+    },
   ];
 
   return (
@@ -25,26 +59,24 @@ export default function LatestPropertiesSection() {
           Properti Terbaru
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {propertyImages.map((imageSrc, i) => (
+          {properties.map(({ imageSrc, title, location, price }, i) => (
             <Card key={i}>
               <CardHeader>
                 <Image
                   alt={`Rumah ${i + 1}`}
                   className="w-full h-48 object-cover rounded-t-lg"
-                  height="200"
+                  height={200}
                   src={imageSrc}
-                  width="400"
+                  width={400}
                 />
               </CardHeader>
               <CardContent>
-                <CardTitle>Rumah Modern Tipe {70 + i * 10}</CardTitle>
+                <CardTitle>{title}</CardTitle>
                 <p className="text-muted-foreground py-2">
                   <MapPin className="inline mr-2 size-6" />
-                  Lokasi {i + 1}
+                  {location}
                 </p>
-                <p className="mt-2">
-                  Rp {(1500 + i * 500).toLocaleString()}.000.000
-                </p>
+                <p className="mt-2">Rp {price.toLocaleString()}.000.000</p>
               </CardContent>
               <CardFooter>
                 <Button className="w-full">

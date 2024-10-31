@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +70,12 @@ export default function Header() {
                     key={item.name}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{
+                      delay: index * 0.1,
+                      opacity: { duration: 0.2 },
+                      y: { duration: 0.3 },
+                    }}
                   >
                     <Link
                       href={item.href}
